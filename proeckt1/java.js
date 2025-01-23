@@ -1,7 +1,14 @@
-alert("Hello");
-let str = "123";
-alert(typeof str); // string
+<script>
+    "use strict";
 
-let num = Number(str);
+    // Не влияет на числа
+    let x = 1;
+    alert( +x ); // 1
 
-alert(typeof num); // number
+    let y = -2;
+    alert( +y ); // -2
+
+    // Преобразует не числа в числа
+    alert( +true ); // 1
+    alert( +"" );   // 0
+</script>
