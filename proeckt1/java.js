@@ -1,19 +1,15 @@
-const now = new Date();
-console.log("Current Date and Time:", now.toLocaleString());
+document.getElementById("learnMoreBtn").addEventListener("click", function() {
+    alert("Learn more about our universal satellite internet application!");
+});
 
-const double = num => num * 2;
-console.log("Double of 5:", double(5));
+document.getElementById("getAppBtn").addEventListener("click", function() {
+    alert("Redirecting to the app download page...");
+});
 
-function buggyFunction() {
-    let a = 5;
-    let b = 10;
-    console.log("Before mistake:", a, b);
+document.getElementById("signInBtn").addEventListener("click", function() {
+    alert("Sign-in functionality coming soon!");
+});
 
-
-    console.log("Sum:", a + c);
-}
-try {
-    buggyFunction();
-} catch (error) {
-    console.error("Error caught:", error);
-}
+document.getElementById("signUpBtn").addEventListener("click", function() {
+    alert("Sign-up functionality coming soon!");
+});
