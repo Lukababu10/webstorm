@@ -1,15 +1,28 @@
-document.getElementById("learnMoreBtn").addEventListener("click", function() {
-    alert("Learn more about our universal satellite internet application!");
+const mainTitle = document.getElementById("main-title");
+mainTitle.style.color = "lightblue";
+
+
+const articles = document.getElementsByClassName("article-title");
+for (let i = 0; i < articles.length; i++) {
+    articles[i].style.color = "#007bff";
+}
+
+
+const paragraphs = document.getElementsByTagName("p");
+for (let i = 0; i < paragraphs.length; i++) {
+    paragraphs[i].style.fontSize = "18px";
+}
+
+
+const firstButton = document.querySelector(".read-more");
+firstButton.addEventListener("click", () => {
+    alert("თქვენ დააჭირეთ ვრცლად ღილაკს!");
 });
 
-document.getElementById("getAppBtn").addEventListener("click", function() {
-    alert("Redirecting to the app download page...");
-});
 
-document.getElementById("signInBtn").addEventListener("click", function() {
-    alert("Sign-in functionality coming soon!");
-});
-
-document.getElementById("signUpBtn").addEventListener("click", function() {
-    alert("Sign-up functionality coming soon!");
+const allButtons = document.querySelectorAll(".read-more");
+allButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        button.style.backgroundColor = "green";
+    });
 });
