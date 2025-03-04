@@ -3,50 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML, CSS, JS Project</title>
-    <link rel="stylesheet" href="css.css">
+    <title>გარე JavaScript</title>
 </head>
 <body>
-<header>
-    <h1 id="main-title">საიტის სათაური</h1>
-    <nav>
-        <ul class="nav-list">
-            <li><a href="#">მთავარი</a></li>
-            <li><a href="#">ჩვენ შესახებ</a></li>
-            <li><a href="#">კონტაქტი</a></li>
-        </ul>
-    </nav>
-</header>
-<main>
-    <section class="content">
-        <article>
-            <h2 class="article-title">სტატია 1</h2>
-            <p>ეს არის პირველი სტატიის ტექსტი.</p>
-            <button class="read-more">ვრცლად</button>
-        </article>
-        <article>
-            <h2 class="article-title">სტატია 2</h2>
-            <p>ეს არის მეორე სტატიის ტექსტი.</p>
-            <button class="read-more">ვრცლად</button>
-        </article>
-        <article>
-            <h2 class="article-title">სტატია 3</h2>
-            <p>ეს არის მესამე სტატიის ტექსტი.</p>
-            <button class="read-more">ვრცლად</button>
-        </article>
-    </section>
-    <aside>
-        <h3>გვერდითი ინფორმაცია</h3>
-        <ul class="sidebar-list">
-            <li>ინფორმაცია 1</li>
-            <li>ინფორმაცია 2</li>
-            <li>ინფორმაცია 3</li>
-        </ul>
-    </aside>
-</main>
-<footer>
-    <p>2025 &copy; ყველა უფლება დაცულია.</p>
-</footer>
-<script src="script.js"></script>
+<p id="text">ეს არის საწყისი ტექსტი.</p>
+<button onclick="changeText()">ტექსტის შეცვლა</button>
+<hr>
+
+<ul id="myList">
+    <li>ელემენტი 1</li>
+    <li>ელემენტი 2</li>
+</ul>
+<button onclick="addItem()">ელემენტის დამატება</button>
+
+<hr>
+
+<div id="box" style="width:100px; height:100px; background:red;"></div>
+<br>
+<button onclick="toggleBox()">მაჩვენე / დამალე</button>
+
+<hr>
+
+<input type="text" id="nameInput" placeholder="შეიყვანე სახელი">
+<button onclick="showName()">აჩვენე სახელი</button>
+<p id="output"></p>
+
+<hr>
+<script src="java.js"></script>
 </body>
 </html>

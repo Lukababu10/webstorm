@@ -1,28 +1,25 @@
-const mainTitle = document.getElementById("main-title");
-mainTitle.style.color = "lightblue";
-
-
-const articles = document.getElementsByClassName("article-title");
-for (let i = 0; i < articles.length; i++) {
-    articles[i].style.color = "#007bff";
+function changeText() {
+    document.getElementById("text").innerText = "ტექსტი შეიცვალა!";
 }
-
-
-const paragraphs = document.getElementsByTagName("p");
-for (let i = 0; i < paragraphs.length; i++) {
-    paragraphs[i].style.fontSize = "18px";
+function addItem() {
+    let li = document.createElement("li");
+    li.innerText = "ახალი ელემენტი";
+    document.getElementById("myList").appendChild(li);
 }
-
-
-const firstButton = document.querySelector(".read-more");
-firstButton.addEventListener("click", () => {
-    alert("თქვენ დააჭირეთ ვრცლად ღილაკს!");
-});
-
-
-const allButtons = document.querySelectorAll(".read-more");
-allButtons.forEach(button => {
-    button.addEventListener("click", () => {
-        button.style.backgroundColor = "green";
-    });
-});
+function toggleBox() {
+    let box = document.getElementById("box");
+    if (box.style.display === "none") {
+        box.style.display = "block";
+    } else {
+        box.style.display = "none";
+    }
+}
+function showName() {
+    let name = document.getElementById("nameInput").value;
+    document.getElementById("output").innerText = "შენი სახელი: " + name;
+}
+function changeColor() {
+    let colors = ["red", "blue", "green", "yellow", "purple", "orange"];
+    let randomColor = colors[Math.floor(Math.random() * colors.length)];
+    document.body.style.backgroundColor = randomColor;
+}
