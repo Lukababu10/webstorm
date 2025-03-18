@@ -1,35 +1,18 @@
 <!DOCTYPE html>
-<html lang="ka">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css.css">
-    <title>გარე JavaScript</title>
+    <title>Movie Search App</title>
+    <link rel="stylesheet" href="css.css.css">
 </head>
 <body>
-<p id="text">ეს არის საწყისი ტექსტი.</p>
-<button onclick="changeText()">ტექსტის შეცვლა</button>
-<hr>
-
-<ul id="myList">
-    <li>ელემენტი 1</li>
-    <li>ელემენტი 2</li>
-</ul>
-<button onclick="addItem()">ელემენტის დამატება</button>
-
-<hr>
-
-<div id="box" style="width:100px; height:100px; background:red;"></div>
-<br>
-<button onclick="toggleBox()">მაჩვენე / დამალე</button>
-
-<hr>
-
-<input type="text" id="nameInput" placeholder="შეიყვანე სახელი">
-<button onclick="showName()">აჩვენე სახელი</button>
-<p id="output"></p>
-
-<hr>
+<div class="container">
+    <h1>Movie Search</h1>
+    <input type="text" id="search" placeholder="Enter movie name...">
+    <button id="searchButton">Search</button>
+    <div class="movies" id="movies"></div>
+</div>
 <script src="java.js"></script>
 </body>
 </html>
