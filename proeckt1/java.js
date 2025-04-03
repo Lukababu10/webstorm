@@ -1,22 +1,30 @@
 const express = require("express");
+const bodyParser = require("body-parser");
+
 const app = express();
-const PORT = 3000;
-app.get("/", (req, res)) => {
-    res.send("ოგესალმებით მტავარ გვერდზე.");
+app.use(bodyParser.urlencoded({extended: true}));
+
+app.get("/", function (req, res)){
+    res.sendFile(__dirname + "/index.html");
 });
 
-app.get("/contact",(rep, res)) => {
-    res.send("ეს არის პროფილის გვერდი.");
+app.post("/", function (req, res ){
+
+ var num1= Number(req.body.n1);
+ var num2= Number(req.body.n2);
+
+ var result = num1 + num2;
+
+  res.send("The result of the calculation is" + result);
 });
 
-app.get("/profile", (req, rea))=> {
-    res.send("ეს არის პროფილის გვერდი.");
+app.get("/bmicalculationr", function (req, res);
 });
 
-app.get("/about", (req, rea))=> {
-    res.send("ეს არის ჩვენი შესახებ გვერდი.");
-});
+app.post("/bmicalculationr", function (req, res){
+    var weight = req.body.weight;
+})
 
-app.get("/about", (req, rea))=> {
-    res.send(`სერვერი გაშვებულია: http://localhost:${PORT}`);
+app.listen(3000, function (){
+    console.log("Server is running on port 3000");
 });
